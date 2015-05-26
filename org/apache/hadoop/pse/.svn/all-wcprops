@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Hadoop-0.21.0/!svn/ver/31/branches/PSE/mapred/src/java/org/apache/hadoop/pse
+END
+PSELineRecordReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Hadoop-0.21.0/!svn/ver/31/branches/PSE/mapred/src/java/org/apache/hadoop/pse/PSELineRecordReader.java
+END
+PSERecordReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Hadoop-0.21.0/!svn/ver/31/branches/PSE/mapred/src/java/org/apache/hadoop/pse/PSERecordReader.java
+END
+PSETextInputFormat.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Hadoop-0.21.0/!svn/ver/31/branches/PSE/mapred/src/java/org/apache/hadoop/pse/PSETextInputFormat.java
+END
