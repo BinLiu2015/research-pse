@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+<property>
+  <name>mapreduce.jobtracker.address</name>
+  <value>172.21.1.124:9001</value>
+</property>
+
+<property>
+  <name>mapreduce.tasktracker.map.tasks.maximum</name>
+  <value>2</value>
+</property>
+
+<property>
+  <name>mapreduce.tasktracker.reduce.tasks.maximum</name>
+  <value>2</value>
+</property>
+
+<property>
+  <name>mapred.child.java.opts</name>
+  <value>-Xmx330m</value>
+</property>
+
+<property>
+  <name>mapreduce.task.io.sort.mb</name>
+  <value>200</value>
+  <description>The total amount of buffer memory to use while sorting 
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks.</description>
+</property>
+
+<property>
+  <name>mapreduce.map.sort.spill.percent</name>
+  <value>0.80</value>
+  <description>The soft limit in the serialization buffer. Once reached, a
+  thread will begin to spill the contents to disk in the background. Note that
+  collection will not block if this threshold is exceeded while a spill is
+  already in progress, so spills may be larger than this threshold when it is
+  set to less than .5</description>
+</property>
+
+<property>
+  <name>mapreduce.jobtracker.handler.count</name>
+  <value>1</value>
+  <description>
+    The number of server threads for the JobTracker. This should be roughly
+    4% of the number of tasktracker nodes.
+  </description>
+</property>
+
+<property>
+  <name>mapreduce.map.log.level</name>
+  <value>INFO</value>
+  <description>The logging level for the map task. The allowed levels are:
+  OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE and ALL.
+  </description>
+</property>
+
+<property>
+  <name>mapreduce.reduce.log.level</name>
+  <value>INFO</value>
+  <description>The logging level for the reduce task. The allowed levels are:
+  OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE and ALL.
+  </description>
+</property>
+
+<property>
+  <name>mapreduce.map.speculative</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>mapreduce.reduce.speculative</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>mapreduce.job.speculative.speculativecap</name>
+  <value>0.1</value>
+</property>
+
+<property>
+  <name>mapreduce.job.speculative.slowtaskthreshold</name>
+  <value>1.0</value>
+</property>
+
+<property>
+  <name>mapreduce.job.speculative.slownodethreshold</name>
+  <value>1.0</value>
+</property>
+
+<!--
+<property>
+  <name>mapreduce.jobtracker.hosts.filename</name>
+  <value>/home/udms/hadoop/hadoop-0.21.0/conf/include</value>
+  <description>Names a file that contains the list of nodes that may
+  connect to the jobtracker.  If the value is empty, all hosts are
+  permitted.</description>
+</property>
+
+<property>
+  <name>mapreduce.jobtracker.hosts.exclude.filename</name>
+  <value>/home/udms/hadoop/hadoop-0.21.0/conf/exclude</value>
+  <description>Names a file that contains the list of hosts that
+  should be excluded by the jobtracker.  If the value is empty, no
+  hosts are excluded.</description>
+</property>
+-->
+
+<property>
+  <name>pse.task.zookeeper.address</name>
+  <value>172.21.1.125,172.21.1.126,172.21.1.127</value>
+  <description>In pse, let tasks (original task and SE task) communicate with each other.</description>
+</property>
+
+<property>
+  <name>pse.task.zookeeper.timeout</name>
+  <value>6000</value>
+</property>
+
+<!--
+<property>
+  <name>pse.map.usePSE</name>
+  <value>true</value>
+</property>
+-->
+
+<property>
+  <name>pse.task.waiting.timeout</name>
+  <value>15000</value>
+</property>
+
+</configuration>
